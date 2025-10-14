@@ -9,5 +9,5 @@ This Processing code creates a fully functional retro-style calculator GUI model
 ![Running Calculator](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Calc.png?raw=true)
 
 * [Windows EXE]()
-* [MacOSX]()
+* [MacOSX](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/macos-aarch64.zip)
 * [Source Code]()
