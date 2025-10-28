@@ -8,6 +8,8 @@ This Processing code creates a fully functional retro-style calculator GUI model
 
 ![Running Calculator](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Calc.png?raw=true)
 
+![CalculatorUML](https://github.com/LOGAN-bruh/portfolio/blob/main/images/CalculatorUML.jpg?raw=true)
+
 * [Windows EXE](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/windows-amd64.zip)
 * [MacOSX](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/macos-aarch64.zip)
 * [MacOSX Intel Based](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/macos-x86_64.zip)
