@@ -7,6 +7,9 @@ String dVal;
 String op;
 boolean left;
 boolean resetOnNextInput = false;
+boolean fullState = false;
+int fullTimer = 0;
+boolean fullBlinkOn = false;
 
 void setup() {
   size(210, 290);
@@ -64,7 +67,103 @@ void draw() {
   }
   updateDisplay();
 }
-void mousePressed() {
+
+void keyReleased() {
+  println("Key:" + key);
+  println("keyCode:" + keyCode);
+  if (key == '+') {
+    dVal = "0.0";
+    left = false;
+    op = "+";
+  } else if (key == '-') {
+    dVal = "0.0";
+    left = false;
+    op = "-";
+  } else if (key == '*') {
+    dVal = "0.0";
+    left = false;
+    op = "*";
+  } else if (key == '/') {
+    dVal = "0.0";
+    left = false;
+    op = "/";
+  } else if (key == 'c') {
+    l = 0.0;
+      r = 0.0;
+      result = 0.0;
+      dVal = "0.0";
+      op = "C";
+      left = true;
+  } else if (key == 's') {
+    if (left) {
+      l = sqrt(l);
+      dVal = str(l);
+    } else {
+      r = sqrt(r);
+      dVal = str(r);
+    }
+  } else if (key == '^') {
+    dVal = "0.0";
+    left = false;
+    op = "^";
+  } else if (key == 'r') {
+    op = "R";
+    performCalculation();
+    left = true;
+  } else if (keyCode == ENTER) {
+    performCalculation();
+  } else if (key == '.') {
+    if (resetOnNextInput) {
+      dVal = "0";
+      resetOnNextInput = false;
+    }
+
+    if (!dVal.contains(".")) {
+      dVal += ".";
+    }
+  } else if (key == 'n') {
+    if (left) {
+      l = l * -1;
+      dVal = str(l);
+    } else {
+      r = r * -1;
+      dVal = str(r);
+    }
+  } else if (keyCode == BACKSPACE) {
+    if (dVal.equals("0") || dVal.equals("0.0") || dVal.equals("Error :(")) return;
+    dVal = dVal.substring(0, dVal.length() - 1);
+    if (dVal.length() == 0 || dVal.equals("-") || dVal.equals(".")) {
+      dVal = "0.0";
+    } 
+    if (left) {
+      l = float(dVal);
+    } else {
+      r = float(dVal);
+    }
+  } else if (key >= '0' && key <= '9') {
+    if (dVal.length() >= 18) return; // prevents display overflow
+    char digit = key;
+
+    if (resetOnNextInput) {
+      dVal = String.valueOf(digit);
+      resetOnNextInput = false;
+    } else {
+      if (dVal.equals("0.0") || dVal.equals("0")) {
+        dVal = String.valueOf(digit);
+      } else {
+        dVal += digit;
+      }
+    }
+
+    if (left) {
+      l = float(dVal);
+    } else {
+      r = float(dVal);
+    }
+  } 
+}
+
+void mouseReleased() {
   for (int i = 0; i<buttons.length; i++) {
     if (buttons[i].over &&  buttons[i].val == '+') {
       dVal = "0.0";
@@ -183,32 +282,63 @@ void updateDisplay() {
   fill(#1B3620);
   rect(105, 35, 190, 50, 4);
   fill(#39FF14);
-  textSize(30);
-  textAlign(RIGHT);
-  if (dVal.length()<12) {
+   // Dynamic text scaling based on number length
+  int len = dVal.length();
+  if (len < 12) {
     textSize(30);
-  } else if (dVal.length ()>=12) {
-    textSize(20);
+  } else if (len < 17) {
+    textSize(22);
+  } else {
+    textSize(16);
   }
-  text(dVal, width-15, 53);
+
+  // Keep right alignment (baseline for bottom reference)
+  textAlign(RIGHT, BASELINE);
+
+  // Dynamically lock text to a fixed distance from bottom of display rectangle
+  float displayTop = 35 - 25;   // display rect center (35) - half height (25)
+  float displayBottom = 35 + 25;
+  float bottomMargin = 8;       // distance between text and bottom of display
+  float textY = displayBottom - bottomMargin;
+
+  // Draw text — consistent vertical position regardless of font size
+  text(dVal, width - 15, textY);
+  if (len >= 18) {
+    float fullBoxWidth = 65;
+    float fullBoxHeight = 15;
+    float fullBoxX = 47;   // position near left side of display
+    float fullBoxY = 20;   // vertically centered in display
+
+    // Light background box
+    fill(#39FF14);
+    noStroke();
+    rectMode(CENTER);
+    rect(fullBoxX, fullBoxY + 2, fullBoxWidth, fullBoxHeight, 4);
+
+    // Dark “Full” text
+    fill(#1B3620);
+    textAlign(CENTER, CENTER);
+    textSize(12);
+    text("Storage Full", fullBoxX, fullBoxY);
+  }
   textSize(12);
+  stroke(0);
 }
 
 void performCalculation() {
-  if (op.equals("+")) {
+  if (op.equals("") || op.equals("C")) {
+    dVal = str(left ? l : r);
+    resetOnNextInput = false;
+    return;
+  } else if (op.equals("+")) {
     result = l + r;
   } else if (op.equals("-")) {
     result = l - r;
   } else if (op.equals("*")) {
-    if (r == 0) {
-      dVal = "Error :(";
-      return;
-    } else {
-      result = l*r;
-    }
+  result = l * r;
   } else if (op.equals("/")) {
     if (r == 0) {
-      dVal = "Error :(";
+      dVal = "0";
       return;
     } else {
       result = l/r;
@@ -220,11 +350,14 @@ void performCalculation() {
   } else if (op.equals("R")) {
     result = round(l);
   }
-  if (result == int(result)) {
-    dVal = str(int(result));
+
+  // Display rounding — formats float neatly up to 8 decimal places
+  if (abs(result - int(result)) < 0.0000001) {
+    dVal = str(int(result));  // If it's effectively an integer
   } else {
-    dVal = str(result);
+    dVal = nf(result, 0, 8);  // Format with up to 8 decimal places
   }
+
   resetOnNextInput = true;
   l = result;
   left = true;
