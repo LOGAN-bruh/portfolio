@@ -14,3 +14,11 @@ This Processing code creates a fully functional retro-style calculator GUI model
 * [MacOSX](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/macos-aarch64.zip)
 * [MacOSX Intel Based](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/macos-x86_64.zip)
 * [Source Code](https://github.com/LOGAN-bruh/portfolio/tree/main/src/Calculator/Logan's%20Calculator)
+
+
+### Ballbounce (2025)
+
+This code is written in Processing and creates a simple interactive animation with bouncing balls (called bubbles). When the program starts, it opens a 500×500 pixel window. The draw() function runs repeatedly, clearing the screen to white each frame and then looping through an ArrayList of Ball objects. For each ball in the list, it calls the display() method to draw the ball on the screen and the move() method to update its position. Whenever the user clicks the mouse, the mousePressed() function runs and adds a new Ball to the list at the current mouse location. Over time, this allows the user to create multiple moving balls by clicking, all of which are animated continuously on the screen.
+
+
+
