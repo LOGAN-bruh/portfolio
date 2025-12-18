@@ -1,4 +1,4 @@
-# Logan Bywater's Programming Portfolio | 2025-26
+# Logan Bywater's Programming Portfolio | 2025-26 | loganbywater1@gmail.com
 
 ## Projects for Term 1
 
