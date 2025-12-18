@@ -22,3 +22,19 @@ This code is written in Processing and creates a simple interactive animation wi
 
 ![RunningBallBounce](https://github.com/LOGAN-bruh/portfolio/blob/main/images/BallBounce.png)
 
+### Level Counter (2025)
+
+This code creates a simple level timer display using Processing. It starts with a variable called level set to 1 and a countdown timer timeLeft set to 10 seconds. In the setup() function, the program creates a 600 by 400 window and sets the text to be centered and displayed in a large font. The draw() function runs continuously, clearing the background each frame and decreasing the timer by 1/60 of a second to match the frame rate. When the timer reaches zero, the level number increases by one and the timer resets back to 10 seconds. The program then displays the current level and shows how many seconds remain until the next level, updating smoothly in real time on the screen.
+
+![levelCounter](https://github.com/LOGAN-bruh/portfolio/blob/main/images/levelcounter.png)
+
+### Making Cars (2025)
+
+This code creates and manages multiple car objects using an array in Processing. At the top, two individual Car variables are declared, along with an array that can hold 50 Car objects. In the setup() function, the program creates a 1000 by 600 window and uses a loop to fill the array by creating a new Car object for each position. The draw() function runs continuously, clearing the screen with a white background each frame and looping through the array of cars. For every car in the array, the program calls the display() method to draw the car on the screen and the move() method to update its position. This results in multiple cars being animated and moving independently across the window.
+
+![MakingCars](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Cars.png)
+
+### Ski Free
+
+The game is a downhill skiing game inspired by SkiFree, where the player controls a skier sliding continuously down a snowy slope. The skier is always moving forward, and the player uses the left, right, and down arrow keys to steer, slow down, or straighten out. Going straight makes the skier move fastest, while sharper turns reduce speed, so the player has to balance control with momentum. As you ski, obstacles like trees or objects appear from different directions, and hitting one causes the skier to crash and stop until the player recovers. The goal is to survive as long as possible while traveling the greatest distance. The game tracks your time, distance, and speed in real time, and difficulty settings increase how fast and frequently obstacles appear. There is a colorful animated title screen, a stats screen where you can view progress and change difficulty, and simple arcade-style gameplay that focuses on reflexes and control rather than a final “win” condition.
+
