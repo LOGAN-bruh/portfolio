@@ -38,3 +38,7 @@ This code creates and manages multiple car objects using an array in Processing.
 
 The game is a downhill skiing game inspired by SkiFree, where the player controls a skier sliding continuously down a snowy slope. The skier is always moving forward, and the player uses the left, right, and down arrow keys to steer, slow down, or straighten out. Going straight makes the skier move fastest, while sharper turns reduce speed, so the player has to balance control with momentum. As you ski, obstacles like trees or objects appear from different directions, and hitting one causes the skier to crash and stop until the player recovers. The goal is to survive as long as possible while traveling the greatest distance. The game tracks your time, distance, and speed in real time, and difficulty settings increase how fast and frequently obstacles appear. There is a colorful animated title screen, a stats screen where you can view progress and change difficulty, and simple arcade-style gameplay that focuses on reflexes and control rather than a final “win” condition.
 
+![SkiFreeRunning](https://github.com/LOGAN-bruh/portfolio/blob/main/images/PlayingSkiFree.png)
+![SkiFreeTitle](https://github.com/LOGAN-bruh/portfolio/blob/main/images/SkiFreeTitle.png)
+![SkiFreeStats](https://github.com/LOGAN-bruh/portfolio/blob/main/images/StatsskiFree.png)
+
