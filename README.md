@@ -26,7 +26,7 @@ This code is written in Processing and creates a simple interactive animation wi
 
 [Source Code](https://github.com/LOGAN-bruh/portfolio/tree/main/src/BallBounce/ballbouncecode)
 
-![RunningBallBounce](https://github.com/LOGAN-bruh/portfolio/blob/main/images/BallBounce.png)
+<img src="./images/BallBounce.png" alt="Running Ball Bounce" width="300">
 
 ### Level Counter (2025)
 
