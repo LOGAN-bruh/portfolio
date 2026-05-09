@@ -6,6 +6,13 @@
 
 ![ComputerProgramming1](https://github.com/LOGAN-bruh/portfolio/blob/main/images/LOGAN%20BYWATER_Computer%20Programming%201_12162025.pdf)
 
+### Code9
+
+Code9 is an AI-powered Python development environment designed as a high-performance "engine" for coding and experimentation. Built with a modern, theme-aware interface, the app features a dual-model architecture that utilizes a primary coding model (such as Qwen 2.5) for complex tasks like refactoring and code generation, alongside a faster Shinzen model (based on Phi-3.5) that powers an interactive AI assistant. This assistant, represented by a "Shinzen" sprite, provides real-time feedback, suggests project ideas, and communicates via a speech bubble as the user types. Beyond standard IDE features like syntax highlighting and file management, Code9 includes advanced automation tools such as AI Fill for intelligent code injection, an integrated Runtime Terminal for script execution, and a Context Accumulator that helps the AI maintain awareness of the user's project history. The application is optimized for local performance using the MLX framework, allowing for efficient model inference on compatible hardware while maintaining a clean, glass-morphism aesthetic.
+
+![Code9 Example](https://github.com/LOGAN-bruh/Code9/blob/main/images/Code9RunningUI.png)
+
+
 ### Lord of the Rings Tower Defense
 
 This game is a 360-degree top-down tower defense set in a fantasy world inspired by Lord of the Rings. Unlike traditional tower defense games where enemies follow a fixed path, here they swarm from all directions toward a central base. You must strategically place defensive cannons in a ring around your stronghold, managing your gold to purchase units and upgrade your base's level. The gameplay features a scaling difficulty system, multiple enemy types—including fast-moving Hobbits and armored Knights—and a dedicated "Upgrade Mode" that allows you to strengthen your towers and base stats to survive an increasingly relentless magical siege. I (Logan Bywater) added drawn sprites, sprite loading, UI development, and other logic upgrades.
@@ -24,31 +31,6 @@ This Processing code creates a fully functional retro-style calculator GUI model
 * [MacOSX](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/macos-aarch64.zip)
 * [MacOSX Intel Based](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/macos-x86_64.zip)
 * [Source Code](https://github.com/LOGAN-bruh/portfolio/tree/main/src/Calculator/Logan's%20Calculator)
-
-
-### Ballbounce (2025)
-
-This code is written in Processing and creates a simple interactive animation with bouncing balls (called bubbles). When the program starts, it opens a 500×500 pixel window. The draw() function runs repeatedly, clearing the screen to white each frame and then looping through an ArrayList of Ball objects. For each ball in the list, it calls the display() method to draw the ball on the screen and the move() method to update its position. Whenever the user clicks the mouse, the mousePressed() function runs and adds a new Ball to the list at the current mouse location. Over time, this allows the user to create multiple moving balls by clicking, all of which are animated continuously on the screen.
-
-[Source Code](https://github.com/LOGAN-bruh/portfolio/tree/main/src/BallBounce/ballbouncecode)
-
-<img src="./images/BallBounce.png" alt="Running Ball Bounce" width="300">
-
-### Level Counter (2025)
-
-This code creates a simple level timer display using Processing. It starts with a variable called level set to 1 and a countdown timer timeLeft set to 10 seconds. In the setup() function, the program creates a 600 by 400 window and sets the text to be centered and displayed in a large font. The draw() function runs continuously, clearing the background each frame and decreasing the timer by 1/60 of a second to match the frame rate. When the timer reaches zero, the level number increases by one and the timer resets back to 10 seconds. The program then displays the current level and shows how many seconds remain until the next level, updating smoothly in real time on the screen.
-
-[Source Code](https://github.com/LOGAN-bruh/portfolio/blob/main/src/LevelCounter/Level_counter.zip)
-
-![levelCounter](https://github.com/LOGAN-bruh/portfolio/blob/main/images/levelcounter.png)
-
-### Making Cars (2025)
-
-This code creates and manages multiple car objects using an array in Processing. At the top, two individual Car variables are declared, along with an array that can hold 50 Car objects. In the setup() function, the program creates a 1000 by 600 window and uses a loop to fill the array by creating a new Car object for each position. The draw() function runs continuously, clearing the screen with a white background each frame and looping through the array of cars. For every car in the array, the program calls the display() method to draw the car on the screen and the move() method to update its position. This results in multiple cars being animated and moving independently across the window.
-
-[Source Code](https://github.com/LOGAN-bruh/portfolio/blob/main/src/MakingCars/Making_Cars.zip)
-
-![MakingCars](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Cars.png)
 
 ### Ski Free
 
