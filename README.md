@@ -1,11 +1,5 @@
 # Logan Bywater's Programming Portfolio | 2025-26 | loganbywater1@gmail.com
 
-## Projects for Term 1
-
-### Industry Certification 
-
-![ComputerProgramming1](https://github.com/LOGAN-bruh/portfolio/blob/main/images/LOGAN%20BYWATER_Computer%20Programming%201_12162025.pdf)
-
 ### Code9
 
 Code9 is an AI-powered Python development environment designed as a high-performance "engine" for coding and experimentation. Built with a modern, theme-aware interface, the app features a dual-model architecture that utilizes a primary coding model (such as Qwen 2.5) for complex tasks like refactoring and code generation, alongside a faster Shinzen model (based on Phi-3.5) that powers an interactive AI assistant. This assistant, represented by a "Shinzen" sprite, provides real-time feedback, suggests project ideas, and communicates via a speech bubble as the user types. Beyond standard IDE features like syntax highlighting and file management, Code9 includes advanced automation tools such as AI Fill for intelligent code injection, an integrated Runtime Terminal for script execution, and a Context Accumulator that helps the AI maintain awareness of the user's project history. The application is optimized for local performance using the MLX framework, allowing for efficient model inference on compatible hardware while maintaining a clean, glass-morphism aesthetic.
