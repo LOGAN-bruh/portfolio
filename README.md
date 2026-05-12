@@ -10,12 +10,16 @@
 
 Code9 is an AI-powered Python development environment designed as a high-performance "engine" for coding and experimentation. Built with a modern, theme-aware interface, the app features a dual-model architecture that utilizes a primary coding model (such as Qwen 2.5) for complex tasks like refactoring and code generation, alongside a faster Shinzen model (based on Phi-3.5) that powers an interactive AI assistant. This assistant, represented by a "Shinzen" sprite, provides real-time feedback, suggests project ideas, and communicates via a speech bubble as the user types. Beyond standard IDE features like syntax highlighting and file management, Code9 includes advanced automation tools such as AI Fill for intelligent code injection, an integrated Runtime Terminal for script execution, and a Context Accumulator that helps the AI maintain awareness of the user's project history. The application is optimized for local performance using the MLX framework, allowing for efficient model inference on compatible hardware while maintaining a clean, glass-morphism aesthetic.
 
+Full page @ [Code9](https://github.com/LOGAN-bruh/Code9)
+
 ![Code9 Example](https://github.com/LOGAN-bruh/Code9/blob/main/images/Code9RunningUI.png)
 
 
 ### Lord of the Rings Tower Defense
 
 This game is a 360-degree top-down tower defense set in a fantasy world inspired by Lord of the Rings. Unlike traditional tower defense games where enemies follow a fixed path, here they swarm from all directions toward a central base. You must strategically place defensive cannons in a ring around your stronghold, managing your gold to purchase units and upgrade your base's level. The gameplay features a scaling difficulty system, multiple enemy types—including fast-moving Hobbits and armored Knights—and a dedicated "Upgrade Mode" that allows you to strengthen your towers and base stats to survive an increasingly relentless magical siege. I (Logan Bywater) added drawn sprites, sprite loading, UI development, and other logic upgrades.
+
+Full page @ [LOTR Tower Defense](https://github.com/LOGAN-bruh/Group6LOTRTD)
 
 ![Running LOTRTD](https://github.com/LOGAN-bruh/portfolio/blob/main/images/LOTRTDrunning.png)
 
@@ -28,7 +32,7 @@ This Processing code creates a fully functional retro-style calculator GUI model
 ![CalculatorUML](https://github.com/LOGAN-bruh/portfolio/blob/main/images/CalculatorUML.jpg?raw=true)
 
 * [Windows EXE](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/windows-amd64.zip)
-* [MacOSX](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/macos-aarch64.zip)
+* [MacOSX Apple Silicon](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/macos-aarch64.zip)
 * [MacOSX Intel Based](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/macos-x86_64.zip)
 * [Source Code](https://github.com/LOGAN-bruh/portfolio/tree/main/src/Calculator/Logan's%20Calculator)
 
@@ -36,7 +40,7 @@ This Processing code creates a fully functional retro-style calculator GUI model
 
 The game is a downhill skiing game inspired by SkiFree, where the player controls a skier sliding continuously down a snowy slope. The skier is always moving forward, and the player uses the left, right, and down arrow keys to steer, slow down, or straighten out. Going straight makes the skier move fastest, while sharper turns reduce speed, so the player has to balance control with momentum. As you ski, obstacles like trees or objects appear from different directions, and hitting one causes the skier to crash and stop until the player recovers. The goal is to survive as long as possible while traveling the greatest distance. The game tracks your time, distance, and speed in real time, and difficulty settings increase how fast and frequently obstacles appear. There is a colorful animated title screen, a stats screen where you can view progress and change difficulty, and simple arcade-style gameplay that focuses on reflexes and control rather than a final “win” condition.
 
-[Source Code](https://github.com/LOGAN-bruh/portfolio/blob/main/src/SkiFree25/compProcessing-project-skifree-main%202/compProcessing-project-skifree-main.zip)
+Full page @ [Ski Free 2025](https://github.com/pwspew/compProcessing-project-skifree)
 
 ![SkiFreeRunning](https://github.com/LOGAN-bruh/portfolio/blob/main/images/PlayingSkiFree.png)
 ![SkiFreeTitle](https://github.com/LOGAN-bruh/portfolio/blob/main/images/SkiFreeTitle.png)
