@@ -1,11 +1,11 @@
 # Logan Bywater's Programming Portfolio | 2025-26 | loganbywater1@gmail.com
 
 # Industry Certifications
-![Computer Programming 1](images/Computer%20Programming%201%20Certification.png)
-![Computer Programming 2 Python](images/Computer%20Programming%202.png)
-![Engineering Principles 1](images/Engineering%20Principles%201%20Certification.png)
-![Engineering principles 2](images/Engineering%20Principles%202%20Certification.png)
-![Entrepreneurship](images/Entrepreneurship%20Certification.png)
+![Computer Programming 1](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/Computer%20Programming%201%20Certification.png)
+![Computer Programming 2 Python](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/Computer%20Programming%202.png)
+![Engineering Principles 1](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/Engineering%20Principles%201%20Certification.png)
+![Engineering principles 2](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/Engineering%20Principles%202%20Certification.png)
+![Entrepreneurship](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/Entrepreneurship%20Certification.png)
 
 # My Projects
 
@@ -24,15 +24,15 @@ This game is a 360-degree top-down tower defense set in a fantasy world inspired
 
 Full page @ [LOTR Tower Defense](https://github.com/LOGAN-bruh/Group6LOTRTD)
 
-![Running LOTRTD](images/LOTRTDrunning.png)
+![Running LOTRTD](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/LOTRTDrunning.png)
 
 ## Calculator (2025)
 
 This Processing code creates a fully functional retro-style calculator GUI modeled after the Apple II aesthetic, featuring a number pad, operators, and display. It supports basic arithmetic operations—addition, subtraction, multiplication, division, as well as exponentiation (^), square root (√), rounding (R), negation (±), and decimal input. The calculator's interface includes numeric buttons (0–9) and operation buttons, each rendered as custom Button objects that respond visually when hovered over. The display at the top shows the current input or result in a green retro font against a dark background. The logic tracks the left (l) and right (r) operands, the selected operation (op), and whether the calculator should reset the display on the next input. Special features like clear (C), backspace (D), and error handling (e.g., division by zero shows "Error :(") are also integrated. The GUI is polished with stylized text like “Apple Computer Inc.® (1977)” and “Apple II Calculator,” giving it a vintage appearance while offering modern calculator functionality.
 
-![Running Calculator](images/Calc.png)
+![Running Calculator](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/Calc.png)
 
-![CalculatorUML](images/CalculatorUML.jpg)
+![CalculatorUML](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/CalculatorUML.jpg)
 
 * [Windows EXE](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/windows-amd64.zip)
 * [MacOSX Apple Silicon](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/macos-aarch64.zip)
@@ -45,6 +45,6 @@ The game is a downhill skiing game inspired by SkiFree, where the player control
 
 Full page @ [Ski Free 2025](https://github.com/pwspew/compProcessing-project-skifree)
 
-![SkiFreeRunning](images/PlayingSkiFree.png)
-![SkiFreeTitle](images/SkiFreeTitle.png)
-![SkiFreeStats](images/StatsskiFree.png)
+![SkiFreeRunning](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/PlayingSkiFree.png)
+![SkiFreeTitle](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/SkiFreeTitle.png)
+![SkiFreeStats](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/StatsskiFree.png)
