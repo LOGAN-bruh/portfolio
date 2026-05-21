@@ -48,3 +48,15 @@ Full page @ [Ski Free 2025](https://github.com/pwspew/compProcessing-project-ski
 ![SkiFreeRunning](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/PlayingSkiFree.png)
 ![SkiFreeTitle](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/SkiFreeTitle.png)
 ![SkiFreeStats](https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/StatsskiFree.png)
+
+## Madlib Generator
+
+This script runs an interactive, text-based Mad Libs game that lets you choose from four different story templates. Once you select a story, the program prompts you to enter a specific number of verbs, nouns, and adjectives, saving your inputs into separate text files (verbs.txt, nouns.txt, and adjectives.txt). It then reads those words back from the files and passes them into an external story module to assemble and display your completed, customized story.
+
+![MadLibs in Terminal](https://github.com/LOGAN-bruh/portfolio/blob/main/images/MadLibs.png)
+
+## Number Guessing
+
+This script runs an interactive number guessing game where the computer randomly selects a secret number between 1 and 100, giving you exactly three attempts to guess it. After each guess, the game provides helpful feedback by stating whether your number is too high, too low, or correct, and it includes smart error-handling to prevent crashes if you accidentally type letters instead of a number. If you run out of tries without guessing correctly, the game reveals the answer and immediately asks if you want to play another round, looping continuously until you type something other than "yes" or "y".
+
+![Number Guessing in Terminal](https://github.com/LOGAN-bruh/portfolio/blob/main/images/NumberGuessingGame.png)
