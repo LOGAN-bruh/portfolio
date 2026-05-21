@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan Bywater | Programming Portfolio</title>
+    <style>
+        /* Cohesive Earthy Palette */
+        :root {
+            --bg: #F5EFE7;
+            --surface: #FFFDFB;
+            --surface-alt: #F6F2ED;
+            --soft: #E6D8C7;
+            --accent: #C07A5B;
+            --accent-hover: #A8674A;
+            --text: #352922;
+            --muted: #826D5D;
+            --border: #E4D8CB;
+            --output-bg: #FDF9F4;
+            --glass: rgba(255, 248, 240, 0.9);
+            --editor-bg: #FFF9F4;
+            --chat-bg: #FFFCF8;
+        }
+
+        /* Global Reset & Base Typography */
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 { 
+            color: var(--text);
+            font-weight: 700;
+        }
+        
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 2rem; 
+        }
+
+        /* Hero Header */
+        header {
+            text-align: center;
+            padding: 5rem 2rem;
+            background-color: var(--surface);
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 3rem;
+        }
+        header h1 { 
+            font-size: 2.8rem; 
+            margin: 0 0 0.5rem 0; 
+            letter-spacing: -0.5px;
+        }
+        header p { 
+            color: var(--muted); 
+            font-size: 1.1rem; 
+            margin: 0.2rem 0;
+        }
+
+        /* Layout Structure styling */
+        .section-title {
+            border-bottom: 2px solid var(--soft);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            margin-top: 3.5rem;
+            font-size: 1.8rem;
+        }
+
+        /* Certifications Grid */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .cert-card {
+            background-color: var(--surface-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(53, 41, 34, 0.03);
+        }
+        .cert-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            margin-bottom: 0.8rem;
+            transition: transform 0.2s ease;
+        }
+        .cert-card img:hover {
+            transform: scale(1.03);
+        }
+        .cert-card h4 {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        /* Project Grid Matrix */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Card Layout */
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.75rem;
+            box-shadow: 0 4px 6px rgba(53, 41, 34, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(53, 41, 34, 0.08);
+            border-color: var(--accent);
+        }
+        .card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1.2rem;
+            border: 1px solid var(--border);
+        }
+        .card h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.4rem;
+        }
+        .card p { 
+            flex-grow: 1; 
+            margin: 0 0 1rem 0;
+            font-size: 0.95rem;
+        }
+        .tech-stack { 
+            font-size: 0.85rem; 
+            color: var(--muted); 
+            margin-bottom: 1.2rem; 
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* UI Interactive Buttons */
+        .button-group {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: auto;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.65rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            font-size: 0.9rem;
+            border: none;
+        }
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--surface);
+        }
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+            padding: calc(0.65rem - 2px) calc(1.25rem - 2px);
+        }
+        .btn-secondary:hover {
+            background-color: var(--accent);
+            color: var(--surface);
+        }
+
+        /* Responsive Modal Architecture */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(53, 41, 34, 0.5);
+            backdrop-filter: blur(4px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .modal-content {
+            background-color: var(--surface);
+            padding: 2.5rem;
+            border-radius: 12px;
+            max-width: 650px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            border: 1px solid var(--border);
+            transform: scale(0.95);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+        .close-btn {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.5rem;
+            font-size: 1.8rem;
+            color: var(--muted);
+            cursor: pointer;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+        .close-btn:hover { color: var(--accent); }
+        .modal-body h4 { margin: 1.5rem 0 0.5rem 0; font-size: 1.1rem; border-left: 3px solid var(--accent); padding-left: 0.5rem;}
+        .modal-body ul { padding-left: 1.2rem; margin: 0.5rem 0; }
+        .modal-body li { margin-bottom: 0.4rem; }
+
+        /* Document Footer */
+        footer { 
+            text-align: center; 
+            padding: 3rem 2rem; 
+            background-color: var(--surface-alt); 
+            border-top: 1px solid var(--border); 
+            color: var(--muted); 
+            margin-top: 5rem;
+        }
+        footer p { margin: 0.4rem 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Logan Bywater</h1>
+            <p>Software Engineer | Systems & Game Loop Architect</p>
+            <p style="font-weight: 600;">loganbywater1@gmail.com | Portfolio Timeline: 2025-26</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2 class="section-title">About Me & Validated Skills</h2>
+            <p>I am a highly analytical software developer experienced in object-oriented logic systems, graphical layout development, terminal parsing loops, and hardware-accelerated local AI engines. My core development philosophy focuses on building robust backend systems accompanied by highly detailed, aesthetic interfaces.</p>
+            
+            <h3 style="margin-top: 2rem; font-size: 1.2rem;">Industry Certifications Earned</h3>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <img src="https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/Computer%20Programming%201%20Certification.png" alt="Computer Programming 1">
+                    <h4>Computer Programming 1</h4>
+                </div>
+                <div class="cert-card">
+                    <img src="https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/Computer%20Programming%202.png" alt="Computer Programming 2">
+                    <h4>Computer Programming 2 (Python)</h4>
+                </div>
+                <div class="cert-card">
+                    <img src="https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/Engineering%20Principles%201%20Certification.png" alt="Engineering Principles 1">
+                    <h4>Engineering Principles 1</h4>
+                </div>
+                <div class="cert-card">
+                    <img src="https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/Engineering%20Principles%202%20Certification.png" alt="Engineering Principles 2">
+                    <h4>Engineering Principles 2</h4>
+                </div>
+                <div class="cert-card">
+                    <img src="https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/Entrepreneurship%20Certification.png" alt="Entrepreneurship">
+                    <h4>Entrepreneurship & Small Business</h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="reflection">
+            <h2 class="section-title">Year-End Engineering Reflection</h2>
+            <p style="background-color: var(--surface-alt); border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; font-style: italic;">
+                "This development cycle marked a major shift in my engineering path from basic logic flowcharts into deep application architecture. Early milestones, like custom object encapsulation in my Processing Calculator and state machines in Ski Free, taught me structural engineering. Transitioning to complex dual-model pipelines in Code9 forced me to optimize performance locally via the MLX framework, managing memory context and threads. My certification milestones run parallel to this growth, transforming raw syntactical knowledge into structural software planning."
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Featured Engineering Projects</h2>
+            
+            <div class="project-grid">
+                
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/LOGAN-bruh/Code9/main/images/Code9RunningUI.png" alt="Code9 Execution Engine">
+                    <h3>Code9 Terminal Engine</h3>
+                    <p class="tech-stack">Python, MLX, Dual-Model NLP, UIX</p>
+                    <p>A local, high-performance programming runtime and workspace pairing localized LLM models with glass-morphic development layouts.</p>
+                    <div class="button-group">
+                        <a href="https://github.com/LOGAN-bruh/Code9" target="_blank" class="btn btn-primary">GitHub Repo</a>
+                        <button class="btn btn-secondary open-modal" data-modal="modal-code9">Design Deep-Dive</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/LOTRTDrunning.png" alt="LOTR Tower Defense">
+                    <h3>LOTR Tower Defense</h3>
+                    <p class="tech-stack">Java, Processing, Object Tracking</p>
+                    <p>A non-linear 360-degree top-down fantasy battle system utilizing algorithmic radial vector tracking instead of rigid path grids.</p>
+                    <div class="button-group">
+                        <a href="https://github.com/LOGAN-bruh/Group6LOTRTD" target="_blank" class="btn btn-primary">GitHub Repo</a>
+                        <button class="btn btn-secondary open-modal" data-modal="modal-lotr">Design Deep-Dive</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/Calc.png" alt="Retro Calculator">
+                    <h3>Apple II Retro Calculator</h3>
+                    <p class="tech-stack">Java, Processing, Custom Components</p>
+                    <p>A highly polished mathematical GUI replicating vintage 1977 phosphor computing terminals via encapsulated interaction structures.</p>
+                    <div class="button-group">
+                        <a href="https://github.com/LOGAN-bruh/portfolio" target="_blank" class="btn btn-primary">GitHub Repo</a>
+                        <button class="btn btn-secondary open-modal" data-modal="modal-calc">Design Deep-Dive</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/PlayingSkiFree.png" alt="Ski Free UI">
+                    <h3>Ski Free Classic Engine</h3>
+                    <p class="tech-stack">Java, State Processing, Object Pools</p>
+                    <p>An endless arcade implementation applying continuous matrix object translations upward to mimic vector momentum and velocity falloff.</p>
+                    <div class="button-group">
+                        <a href="https://github.com/pwspew/compProcessing-project-skifree" target="_blank" class="btn btn-primary">GitHub Repo</a>
+                        <button class="btn btn-secondary open-modal" data-modal="modal-ski">Design Deep-Dive</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/MadLibs.png" alt="Madlib Terminal Interface" onerror="this.src='https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=500'">
+                    <h3>Modular Madlib Generator</h3>
+                    <p class="tech-stack">Python, File IO, Stream Parsing</p>
+                    <p>A persistent, string-injecting terminal application utilizing external read/write queues to safely isolate raw sentence maps from components.</p>
+                    <div class="button-group">
+                        <a href="https://github.com/LOGAN-bruh/portfolio" target="_blank" class="btn btn-primary">GitHub Repo</a>
+                        <button class="btn btn-secondary open-modal" data-modal="modal-madlib">Design Deep-Dive</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/LOGAN-bruh/portfolio/main/images/NumberGuessingGame.png" alt="Number Guessing Screen" onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500'">
+                    <h3>Robust Guessing Loop</h3>
+                    <p class="tech-stack">Python, Conditional Bounds, Exception Safety</p>
+                    <p>A continuous terminal execution framework running dynamic range bounds feedback loops protected by native data cast interceptors.</p>
+                    <div class="button-group">
+                        <a href="https://github.com/LOGAN-bruh/portfolio" target="_blank" class="btn btn-primary">GitHub Repo</a>
+                        <button class="btn btn-secondary open-modal" data-modal="modal-guess">Design Deep-Dive</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <div class="modal-overlay" id="modal-code9">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>Code9: Local Dual-Model Architecture</h2>
+            <div class="modal-body">
+                <h4>Engine Architecture</h4>
+                <p>Designed a split text-generation structure separating heavier refactoring streams from interactive real-time loops.</p>
+                <h4>Design Decisions</h4>
+                <ul>
+                    <li><strong>Dual Allocation Pipeline:</strong> Tasks like block code generation route directly to a <code>Qwen 2.5</code> pipeline, whereas asynchronous assistant logic feeds into a lightweight <code>Phi-3.5</code> system.</li>
+                    <li><strong>Context Accumulator Strategy:</strong> Built state queues tracking active script execution logs to accurately maintain AI memory states without causing memory bloat during inference cycles via MLX.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-lotr">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>LOTR TD: Vector Engine & Logic</h2>
+            <div class="modal-body">
+                <h4>Engine Architecture</h4>
+                <p>Built a non-linear path tracking network allowing free entity swarm fields outside standard path grids.</p>
+                <h4>Design Decisions</h4>
+                <ul>
+                    <li><strong>360-Degree Traversal Calculations:</strong> Entities update positioning by calculating direct delta step paths on each frame update pointing toward the core coordinates.</li>
+                    <li><strong>UI and State Isolation:</strong> Separated state updates via discrete operation routines, decoupling weapon fire routines during "Battle Phase" from interaction canvas calls during "Upgrade Phase".</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-calc">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>Retro Calculator: Component Architecture</h2>
+            <div class="modal-body">
+                <h4>Engine Architecture</h4>
+                <p>Constructed a fully modular interface system driven entirely by independent button interaction fields.</p>
+                <h4>Design Decisions</h4>
+                <ul>
+                    <li><strong>State Machine Implementation:</strong> Tracks distinct math operation tokens, shielding the accumulator from layout input disruptions after tracking mathematical calculation faults like divide-by-zero actions.</li>
+                    <li><strong>Aesthetic Controls:</strong> Rendered specific green retro font structures matched perfectly against a low-luminescence matrix backdrop to accurately replicate historic Apple II monitors.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-ski">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>Ski Free: Translational Vector Loops</h2>
+            <div class="modal-body">
+                <h4>Engine Architecture</h4>
+                <p>Engineered speed simulation mechanics while holding object tracking locked along fixed screen planes.</p>
+                <h4>Design Decisions</h4>
+                <ul>
+                    <li><strong>Relative Coordinate Mapping:</strong> Kept the skier's rendering constant along the window's vertical bounds, moving terrain entities relative to the input velocity values.</li>
+                    <li><strong>Difficulty Scaling:</strong> Implemented linear difficulty algorithms to alter entity initialization clocks relative to active speed levels.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-madlib">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>Madlib Generator: Persistent File IO</h2>
+            <div class="modal-body">
+                <h4>Engine Architecture</h4>
+                <p>Designed structured input workflows to guarantee text-processing stability across distinct component domains.</p>
+                <h4>Design Decisions</h4>
+                <ul>
+                    <li><strong>Data Decoupling:</strong> Prompts write user strings directly out into independent asset documents (<code>verbs.txt</code>, <code>nouns.txt</code>). This keeps data structures clean by keeping string assembly routines detached from memory storage.</li>
+                    <li><strong>Modular Templates:</strong> Built template injection loops capable of parsing text maps dynamically regardless of the chosen story layout.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-guess">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>Guessing Game: Exception Loop Safety</h2>
+            <div class="modal-body">
+                <h4>Engine Architecture</h4>
+                <p>Constructed an exception-safe application engine preventing runtime environment failures due to unexpected terminal values.</p>
+                <h4>Design Decisions</h4>
+                <ul>
+                    <li><strong>Input Sanitization Guards:</strong> Wrapped keyboard string acquisition modules within <code>try-except</code> layers to safely catch text input conversion faults instead of crashing the program execution frame.</li>
+                    <li><strong>State Reset Routines:</strong> Wired immediate reset loop triggers handling active attempt counts and initialization flags upon completing game runs.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025-26 Logan Bywater. All portfolios and codebases built from scratch.</p>
+        <p><a href="mailto:loganbywater1@gmail.com" style="color: var(--accent); font-weight: bold; text-decoration: none;">Email Logan</a></p>
+    </footer>
+
+    <script>
+        const openButtons = document.querySelectorAll('.open-modal');
+        const closeButtons = document.querySelectorAll('.close-btn');
+        const overlays = document.querySelectorAll('.modal-overlay');
+
+        openButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modalId = button.getAttribute('data-modal');
+                document.getElementById(modalId).classList.add('active');
+            });
+        });
+
+        closeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.target.closest('.modal-overlay').classList.remove('active');
+            });
+        });
+
+        overlays.forEach(overlay => {
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) overlay.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
