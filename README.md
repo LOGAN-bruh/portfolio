@@ -1,11 +1,13 @@
 # Logan Bywater's Programming Portfolio | 2025-26 | loganbywater1@gmail.com
 
-## Industry Certifications
+# Industry Certifications
 ![Computer Programming 1](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Computer%20Programming%201%20Certification.png)
 ![Computer Programming 2 Python](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Computer%20Programming%202.png)
 ![Engineering Principles 1](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Engineering%20Principles%201%20Certification.png)
 ![Engineering principles 2](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Engineering%20Principles%202%20Certification.png)
 ![Entrepreneurship](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Entrepreneurship%20Certification.png)
+
+# My Projects
 
 ## Code9
 
