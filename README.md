@@ -1,11 +1,11 @@
 # Logan Bywater's Programming Portfolio | 2025-26 | loganbywater1@gmail.com
 
 # Industry Certifications
-![Computer Programming 1](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Computer%20Programming%201%20Certification.png)
-![Computer Programming 2 Python](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Computer%20Programming%202.png)
-![Engineering Principles 1](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Engineering%20Principles%201%20Certification.png)
-![Engineering principles 2](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Engineering%20Principles%202%20Certification.png)
-![Entrepreneurship](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Entrepreneurship%20Certification.png)
+![Computer Programming 1](images/Computer%20Programming%201%20Certification.png)
+![Computer Programming 2 Python](images/Computer%20Programming%202.png)
+![Engineering Principles 1](images/Engineering%20Principles%201%20Certification.png)
+![Engineering principles 2](images/Engineering%20Principles%202%20Certification.png)
+![Entrepreneurship](images/Entrepreneurship%20Certification.png)
 
 # My Projects
 
@@ -15,7 +15,7 @@ Code9 is an AI-powered Python development environment designed as a high-perform
 
 Full page @ [Code9](https://github.com/LOGAN-bruh/Code9)
 
-![Code9 Example](https://github.com/LOGAN-bruh/Code9/blob/main/images/Code9RunningUI.png)
+![Code9 Example](https://raw.githubusercontent.com/LOGAN-bruh/Code9/main/images/Code9RunningUI.png)
 
 
 ## Lord of the Rings Tower Defense
@@ -24,15 +24,15 @@ This game is a 360-degree top-down tower defense set in a fantasy world inspired
 
 Full page @ [LOTR Tower Defense](https://github.com/LOGAN-bruh/Group6LOTRTD)
 
-![Running LOTRTD](https://github.com/LOGAN-bruh/portfolio/blob/main/images/LOTRTDrunning.png)
+![Running LOTRTD](images/LOTRTDrunning.png)
 
 ## Calculator (2025)
 
 This Processing code creates a fully functional retro-style calculator GUI modeled after the Apple II aesthetic, featuring a number pad, operators, and display. It supports basic arithmetic operations—addition, subtraction, multiplication, division, as well as exponentiation (^), square root (√), rounding (R), negation (±), and decimal input. The calculator's interface includes numeric buttons (0–9) and operation buttons, each rendered as custom Button objects that respond visually when hovered over. The display at the top shows the current input or result in a green retro font against a dark background. The logic tracks the left (l) and right (r) operands, the selected operation (op), and whether the calculator should reset the display on the next input. Special features like clear (C), backspace (D), and error handling (e.g., division by zero shows "Error :(") are also integrated. The GUI is polished with stylized text like “Apple Computer Inc.® (1977)” and “Apple II Calculator,” giving it a vintage appearance while offering modern calculator functionality.
 
-![Running Calculator](https://github.com/LOGAN-bruh/portfolio/blob/main/images/Calc.png?raw=true)
+![Running Calculator](images/Calc.png)
 
-![CalculatorUML](https://github.com/LOGAN-bruh/portfolio/blob/main/images/CalculatorUML.jpg?raw=true)
+![CalculatorUML](images/CalculatorUML.jpg)
 
 * [Windows EXE](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/windows-amd64.zip)
 * [MacOSX Apple Silicon](https://github.com/LOGAN-bruh/portfolio/blob/main/src/Calculator/macos-aarch64.zip)
@@ -45,7 +45,6 @@ The game is a downhill skiing game inspired by SkiFree, where the player control
 
 Full page @ [Ski Free 2025](https://github.com/pwspew/compProcessing-project-skifree)
 
-![SkiFreeRunning](https://github.com/LOGAN-bruh/portfolio/blob/main/images/PlayingSkiFree.png)
-![SkiFreeTitle](https://github.com/LOGAN-bruh/portfolio/blob/main/images/SkiFreeTitle.png)
-![SkiFreeStats](https://github.com/LOGAN-bruh/portfolio/blob/main/images/StatsskiFree.png)
-
+![SkiFreeRunning](images/PlayingSkiFree.png)
+![SkiFreeTitle](images/SkiFreeTitle.png)
+![SkiFreeStats](images/StatsskiFree.png)
